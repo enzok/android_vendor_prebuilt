@@ -15,6 +15,7 @@
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     CalculatorGooglePrebuilt \
+    LatinIMEGooglePrebuilt \
     NexusLauncherIcons \
     NexusWallpapersStubPrebuilt \
     WallpaperPickerGooglePrebuilt \
