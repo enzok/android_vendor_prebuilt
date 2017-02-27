@@ -26,6 +26,20 @@ LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := LatinIMEGooglePrebuilt
+LOCAL_MODULE_TAGS := optional
+ifeq ($(TARGET_ARCH),arm)
+LOCAL_SRC_FILES := LatinIMEGooglePrebuilt/arm/LatinIMEGooglePrebuilt.apk
+else
+LOCAL_SRC_FILES := LatinIMEGooglePrebuilt/arm64/LatinIMEGooglePrebuilt.apk
+endif
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_OVERRIDES_PACKAGES := LatinIME
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := NexusLauncherIcons
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := NexusLauncherIcons/NexusLauncherIcons.apk

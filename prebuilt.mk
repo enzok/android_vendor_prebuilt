@@ -15,6 +15,7 @@
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     CalculatorGooglePrebuilt \
+    LatinIMEGooglePrebuilt \
     NexusLauncherIcons \
     NexusWallpapersStubPrebuilt \
     WallpaperPickerGooglePrebuilt \
@@ -27,7 +28,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # wallpaper location prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wallpapers_loc_request_suw=true
+    ro.wallpapers_loc_request_suw=true \
+    ro.com.google.ime.theme_id=5
 
 # live wallpapers arm64 only
 ifeq ($(TARGET_ARCH),arm64)
