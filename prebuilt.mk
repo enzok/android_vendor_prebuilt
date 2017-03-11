@@ -14,33 +14,5 @@
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    CalculatorGooglePrebuilt \
-    LatinIMEGooglePrebuilt \
-    NexusLauncherIcons \
-    NexusWallpapersStubPrebuilt \
-    WallpaperPickerGooglePrebuilt \
-    NexusLauncherPrebuilt \
-    WallpapersUsTwo \
     PixelDialer
 
-# Include package overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/prebuilt/overlay/
-
-# wallpaper location prop
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wallpapers_loc_request_suw=true \
-    ro.com.google.ime.theme_id=5
-
-# live wallpapers arm64 only
-ifeq ($(TARGET_ARCH),arm64)
-PRODUCT_PACKAGES += \
-    WallpapersBReel \
-    libgdx.so \
-    libgeswallpapers-jni.so \
-    libjpeg.so
-
-PRODUCT_COPY_FILES += \
-    vendor/prebuilt/lib64/libgdx.so:system/lib64/libgdx.so \
-    vendor/prebuilt/lib64/libgeswallpapers-jni.so:system/lib64/libgeswallpapers-jni.so
-endif
